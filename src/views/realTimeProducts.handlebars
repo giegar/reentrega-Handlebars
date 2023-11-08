@@ -1,0 +1,31 @@
+<h2>Lista de productos en tiempo real</h2>
+
+<div>
+    <h3>Formulario para agregar productos</h3>
+    <form>
+        <div>
+            <label for="title">Nombre del producto</label>
+            <input type="text" name="title" id="title">
+        </div>
+         <div>
+            <label for="description">Descripcion</label>
+            <input type="text" name="description" id="description">
+        </div>
+         <div>
+            <label for="price">Precio</label>
+            <input type="text" name="price" id="price">
+        </div>
+         <button type="submit">Agregar</button>
+    </form>
+</div>
+
+<div>
+    {{#each products}}
+        <h3>{{this.titulo}}</h3>
+        <p>{{this.descripcion}}</p>
+        <p>{{this.precio}}</p>
+    {{/each}}
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/src/index.js"></script>
