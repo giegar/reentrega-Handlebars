@@ -1,6 +1,6 @@
 
 const socket = io();
-/*
+
 const form = document.getElementById('form')
 const title = document.getElementById('title')
 const description = document.getElementById('description')
@@ -65,4 +65,4 @@ const createHtml = (data) =>{
 socket.on('newProduct', (data) => {
     products.innerHTML = ""
     createHtml(data)
-})*/
+})
