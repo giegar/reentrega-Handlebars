@@ -28,30 +28,23 @@
 {{!----- SCRIPTS -----}}
 
 <script src="/socket.io/socket.io.js"></script>
-{{! <script src="/src/public/index.js"> </script>}}
+{{! <script src="/src/public/index.js"> </script> ---- Aca tira error, no encuentra el archivo}}
 
 <script>
     const socket = io();
-    
+
+    {{! --- Probando}}
     const boton = document.querySelector('#addbtn')
 
     const accion = function () {
         const value = document.querySelector('#title').value
         console.log(value)
-        socket.emit('message', value)
+        socket.emit('newProd', value)
     }
 
     boton.addEventListener("onclick", accion)
 
     
-
-    /*const prueba = document.querySelector('#title')
-    console.log(prueba);*/
-
-   /* document.querySelector('addbtn').onclick = {
-        const value = document.querySelector('title');
-        console.log(hola);
-    }*/
 </script>
 
 
